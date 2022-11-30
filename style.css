@@ -1,0 +1,321 @@
+/* global starts  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+/* global ends  */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* container starts  */
+    .container{
+        height: 210vh;
+        width: 100vw;
+        display: grid;
+        grid-template-rows: 1.5fr 14fr 8fr;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+/* container ends  */
+
+/* menu starts  */
+    .menu{
+        grid-column:1/2;
+        grid-row: 1/2;
+        background: black;
+        display: grid;
+        grid-template-columns: 3rem 6rem 1fr 4rem;
+        padding: 1rem;
+    }
+
+        /* menu children starts  */
+        .menu>.logo{
+            grid-column: 2/3;
+            border-radius: 50%;
+            /* height: 80%; */
+            /* width: 6rem; */
+            padding: 1rem;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            overflow: hidden;
+
+        }
+        .menu>ul{
+            grid-column: 3/4;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            /* padding-right: 5rem */
+        }
+            .menu>ul>li{
+                margin-right: 3rem;
+            }
+            .menu>ul>li:hover{
+                border-bottom: 4px solid rgb(190, 190, 11);
+                transition: all 0.5s ease;
+            }
+                .menu>ul>li>a{
+                    text-decoration: none;
+                    font-size: 2rem;
+                    color: white;
+                }
+        /* menu children ends */
+/* menu ends  */
+
+/* rooms starts  */
+    .rooms{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        /* background: rgb(123, 80, 80); */
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 5fr;
+    }
+
+        /* room children starts here  */
+        .rooms>.ourrooms{
+            grid-row: 1/2;
+            /* background: red; */
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+            .ourrooms>h1{
+                padding-left: 3rem;
+                font-size: 3rem;
+                letter-spacing: 5px;
+            }
+        .rooms>.productsrooms{
+            grid-row: 2/3;
+            /* background: green; */
+            display: grid;
+            grid-template-columns: 8rem 1fr 1fr 1fr 8rem;
+            gap: 1rem;
+        }
+            .room-one{
+                grid-column: 2/3;
+                /* background: #000; */
+            }
+            .room-two{
+                grid-column: 3/4;
+                /* background: yellow; */
+            }
+            .room-three{
+                grid-column: 4/5;
+                /* background: pink; */
+            }
+                .productsrooms>div{
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+                    /* padding: 0.6rem; */
+                }
+                    .productsrooms div .photo{
+                        grid-row: 1/2;
+                         background-repeat: no-repeat;
+                         background-size: cover;
+                         filter: brightness(50%);
+                    }
+                    .productsrooms>div>.content{
+                        grid-row: 2/3;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        padding: 1rem 2rem;
+                        /* margin-top: 1rem; */
+                    }
+                        .productsrooms>div>.content>p{
+                            font-size: 1rem;
+                            text-align: center;
+                        }
+                        .productsrooms>div>.content>h4{
+                            font-size: 1.5rem;
+                            padding-bottom: 3rem;
+                        }
+                        .productsrooms>div>.content>button{
+                            height: 3rem;
+                            width: 7rem;
+                            background: white;
+                            border: 2px solid gold;
+                        }
+                    
+                        .productsrooms>.room-one>.photo{
+                            background-image: url("https://images.unsplash.com/photo-1574643156929-51fa098b0394?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+                        }
+                        .productsrooms>.room-two>.photo{
+                            background-image: url("https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+                        }
+                        .productsrooms>.room-three>.photo{
+                            background-image: url("https://images.unsplash.com/flagged/photo-1573168710865-2e4c680d921a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+                        }
+                    
+        /* room children ends here  */
+/* rooms ends  */
+
+/* offers starts  */
+    .offers{
+        /* background: rgb(60, 114, 212); */
+        grid-column: 1/2;
+        grid-row: 3/-1;
+        display: grid;
+        grid-template-rows: 1fr 5fr;
+    }
+        .ouroffers{
+            grid-row: 1/2;
+        }
+            .ouroffers>h1{
+                padding-left: 3rem;
+                font-size: 3rem;
+                letter-spacing: 5px;
+            }
+        .offerphotos{
+            grid-row: 2/3;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns:9rem 1fr 1fr 9rem;
+            padding-bottom: 5rem;
+            gap: 1rem;
+
+        }
+            .sectionone{
+                grid-column: 2/3;
+                background: white;
+                display: grid;
+                grid-template-columns: repeat(12,1fr);
+                grid-template-rows: repeat(12,1fr);
+            }
+                .sectionone>.image{
+                    background-image: url("https://images.unsplash.com/photo-1598928636135-d146006ff4be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    grid-row: 1/-1;
+                    grid-column: 1/-1;
+                    z-index: 2;
+                    filter: brightness(50%);
+
+                }
+                .sectionone>h2{
+                    /* padding-left: 2rem; */
+                    font-size: 2rem;
+                    letter-spacing: 4px;
+                    grid-column: 2/8;
+                    grid-row: 3/6;
+                    z-index: 3;
+                    color: gold;
+                }
+                .sectionone>h3{
+                    font-size: 1.5rem;
+                    color: white;
+                    grid-column:6/10;
+                    grid-row:8/11;
+                    z-index: 3;
+                    font-weight: 100;
+                }
+                    .sectionone>h3>span{
+                        color: gold;
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                    }
+                .sectionone>p{
+                    grid-row: 5/13;
+                    grid-column: 2/4;
+                    font-size: 1rem;
+                    writing-mode: vertical-lr;
+                    color: white;
+                    z-index: 3;
+                }
+                .sectionone>button{
+                    grid-row: 10/12;
+                    grid-column: 9/12;
+                    z-index: 3;
+                    background: transparent;
+                    border: 2px solid gold;
+                    color: gold;
+                    font-size: 1rem;
+                }
+            .sectiontwo{
+                grid-column: 3/4;
+                display: grid;
+                grid-template-columns: repeat(12,1fr);
+                grid-template-rows: repeat(12,1fr);
+            }
+                .sectiontwo>.gold{
+                    grid-row: 1/-1;
+                    grid-column: 1/7;
+                    z-index: 4;
+                    background: rgb(179, 153, 9);
+                }
+                .sectiontwo>.image{
+                    grid-row: 1/-1;
+                    grid-column: 7/-1;
+                    background-image: url("https://images.unsplash.com/photo-1556020685-ae41abfc9365?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    z-index: 4;
+                    filter: brightness(50%);
+
+                }
+
+                .sectiontwo>p{
+                    grid-row: 5/7;
+                    grid-column:3/8;
+                    font-size: 1rem;
+                    color: white;
+                    z-index: 5;
+                }
+                .sectiontwo>.firsth2{
+                    font-size: 1.8rem;
+                    font-weight: 100;
+                    grid-row: 6/8;
+                    grid-column:4/7;
+                    z-index: 5;
+                    color: white;
+                }
+                .sectiontwo>.secondh2{
+                    padding-top: 3px;
+                    font-size: 1.8rem;
+                    font-weight: 100;
+                    grid-row: 7/9;
+                    grid-column: 4/8;
+                    z-index: 5;
+                    color: white;
+                }
+                .sectiontwo>.discount{
+                    padding-top: 3px;
+                    grid-column: 4/12;
+                    grid-row: 8/12;
+                    z-index: 5;
+                    font-size: 2rem;
+                    color: white;
+                }
+                .sectiontwo>.discount>span{
+                    color: orange;
+                }
+                .sectiontwo>.limited{
+                    grid-row: 2/5;
+                    grid-column: 5/10;
+                    padding-left: 1.6rem;
+                    z-index: 5;
+                    color: orange;
+                }
+                .sectiontwo>button{
+                    grid-row: 10/12;
+                    grid-column: 2/5;
+                    z-index: 5;
+                    background: rgb(179, 153, 9);
+                    color: white;
+                    border: 2px solid white;
+                }
+/* offers ends  */
